@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <html lang="es">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Memotest!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Pompiere|Condiment" rel="stylesheet">
+</head>
+
+<body>
+    <video autoplay muted loop id="bgVideo" poster="images/background.png">
+        <source src="images/nubes.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div id="welcomeContainer">
+        <div id="greeting">
+            <h1>᛭ Runeland ᛭</h1>
+            <p>Encuentra todas las cartas!</p>
+            <p>Pero antes de empezar...</p>
+            <p>Cuál es tu nombre?</p>
+            <input type="text" id="playerName">
+            <p>Con qué dificultad te gustaría jugar?</p>
+            <button class="lvl" id="easyLvl">FÁCIL</button> <br />
+            <button class="lvl" id="mediumLvl">INTERMEDIO</button> <br />
+            <button class="lvl" id="hardLvl">EXPERTO</button>
+            <p id="warning" class="hide">El nombre es requerido.</p>
+        </div>
+    </div>
+
+    <div id="gameContainer" class="hide">
+        <div id="gameInfo">
+            <h2>Hola <span id="name"></span></h2>
+            <p>Encuentra todos los pares en menos de <span id="attempts"></span> intentos</p>
+            <p>Nivel:
+                <span id="showChosenLvl"></span>
+            </p>
+        </div>
+        <p id="counterContainer">Intentos restantes: <span id="counter"></span> </p>
+        <div id="board">
+            <img id="1" data-id="1" src="images/tapada.jpg">
+
+            <img id="2" data-id="2" src="images/tapada.jpg">
+
+            <img id="3" data-id="3" src="images/tapada.jpg">
+
+            <img id="4" data-id="4" src="images/tapada.jpg">
+
+            <img id="5" data-id="5" src="images/tapada.jpg">
+
+            <img id="6" data-id="6" src="images/tapada.jpg">
+
+            <img id="7" data-id="7" src="images/tapada.jpg">
+
+            <img id="8" data-id="8" src="images/tapada.jpg">
+
+            <img id="9" data-id="9" src="images/tapada.jpg">
+
+            <img id="10" data-id="10" src="images/tapada.jpg">
+
+            <img id="11" data-id="11" src="images/tapada.jpg">
+
+            <img id="12" data-id="12" src="images/tapada.jpg">
+
+        </div>
+
+    </div>
+    <div id="finalModal" class="hide">
+        <p id="win" class="hide">GANASTE! con <span id="attemptsLeft"></span> intentos restantes,</p>
+        <p id="loss" class="hide">Perdiste, pero</p>
+        <p>ya puedes jugar de nuevo.</p>
+        <button id="reload">VOLVER A JUGAR</button>
+        <table id="ranking">
+            <tr>
+                <th>NOMBRE</th>
+                <th>NIVEL</th>
+                <th>INTENTOS</th>
+            </tr>
+            <tr>
+                <td id="rankNames">
+                </td>
+                <td id="rankLevel">
+                </td>
+                <td id="rankAttempts">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
