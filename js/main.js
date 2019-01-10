@@ -7,18 +7,18 @@ var selectedCards = [];
 var players = JSON.parse(localStorage.getItem("plays"))
 
 const pictures = [
-    "images/othalan.png",
-    "images/dagaz.png",
-    "images/ger.png",
-    "images/ingwaz.png",
-    "images/ior.png",
-    "images/mannaz.png",
-    "images/othalan.png",
-    "images/dagaz.png",
-    "images/ger.png",
-    "images/ingwaz.png",
-    "images/ior.png",
-    "images/mannaz.png"
+    "https://res.cloudinary.com/inspiraholic/image/upload/v1546976879/runeland/othalan.png",
+    "https://res.cloudinary.com/inspiraholic/image/upload/v1546976879/runeland/dagaz.png",
+    "https://res.cloudinary.com/inspiraholic/image/upload/v1546976879/runeland/ger.png",
+    "https://res.cloudinary.com/inspiraholic/image/upload/v1546976879/runeland/ingwaz.png",
+    "https://res.cloudinary.com/inspiraholic/image/upload/v1546976879/runeland/ior.png",
+    "https://res.cloudinary.com/inspiraholic/image/upload/v1546976879/runeland/mannaz.png",
+    "https://res.cloudinary.com/inspiraholic/image/upload/v1546976879/runeland/othalan.png",
+    "https://res.cloudinary.com/inspiraholic/image/upload/v1546976879/runeland/dagaz.png",
+    "https://res.cloudinary.com/inspiraholic/image/upload/v1546976879/runeland/ger.png",
+    "https://res.cloudinary.com/inspiraholic/image/upload/v1546976879/runeland/ingwaz.png",
+    "https://res.cloudinary.com/inspiraholic/image/upload/v1546976879/runeland/ior.png",
+    "https://res.cloudinary.com/inspiraholic/image/upload/v1546976879/runeland/mannaz.png"
 ]
 
 //////////////// inicio del juego ////////////
@@ -99,7 +99,7 @@ $("img").on("click", function () {
         } else {
             setTimeout(function () {
                 for (var i = 1; i <= selectedCards.length; i++) {
-                    $("#" + selectedCards[i - 1].attr('id')).attr("src", "images/tapada.jpg")
+                    $("#" + selectedCards[i - 1].attr('id')).attr("src", "https://res.cloudinary.com/inspiraholic/image/upload/v1546976879/runeland/tapada.jpg")
                 };
                 selectedCards = []
             }, 1000);
